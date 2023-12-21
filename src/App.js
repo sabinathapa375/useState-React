@@ -1,25 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
+import React, {useState} from "react";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+function App (){
+
+  useState("Sabina");
+  const [name, setName] = useState("Sabina");
+  const [roll, setRoll] = useState('126');
+  const handleClick = ()=>{
+    setName("Hello World");
+    setRoll(108);
+  }
+  return(<React.Fragment>
+    <h1>{name}</h1>
+    <h2>{roll}</h2>
+    <button type="button" onClick={handleClick}>Change Me</button>
+  </React.Fragment>)
 }
 
 export default App;
